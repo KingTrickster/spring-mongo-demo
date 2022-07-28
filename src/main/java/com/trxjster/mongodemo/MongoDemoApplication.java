@@ -29,7 +29,7 @@ public class MongoDemoApplication {
             Student student = new Student(
                     "Mike",
                     "Mock",
-                    "mike@mail.com",
+                    "mike2@mail.com",
                     Gender.MALE,
                     address,
                     List.of("Computer Science", "Videogames"),
