@@ -21,23 +21,4 @@ public class MongoDemoApplication {
         SpringApplication.run(MongoDemoApplication.class, args);
     }
 
-    //TODO: Remove bean underneath, change for service and controller layers implementation
-    @Bean
-    CommandLineRunner runner(StudentRepo repo){
-        return  args -> {
-            Address address = new Address("Mexico", "Mexico City", "55123");
-            Student student = new Student(
-                    "Mike",
-                    "Mock",
-                    "mike2@mail.com",
-                    Gender.MALE,
-                    address,
-                    List.of("Computer Science", "Videogames"),
-                    BigDecimal.TEN,
-                    LocalDateTime.now()
-            );
-            repo.insert(student);
-        };
-    }
-
 }
